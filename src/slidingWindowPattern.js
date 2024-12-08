@@ -1,3 +1,4 @@
+/* Find maximum averge of a fixed size subarray*/
 export function findMaxAverage(arr, k){
     let arrSize = arr.length;
     let maxAverage = 0;
@@ -12,6 +13,6 @@ export function findMaxAverage(arr, k){
         windowSum = windowSum + arr[j] - arr[j-k];
         maxSum = Math.max(maxSum, windowSum);
     }
-    maxAverage = Math.round(maxSum);
+    maxAverage = Math.round(maxSum/k);
     return maxAverage;
 }
